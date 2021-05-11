@@ -1,0 +1,36 @@
+00:22:16,219 INFO  org.apache.flink.client.CliFrontend                           - --------------------------------------------------------------------------------
+00:22:16,220 INFO  org.apache.flink.client.CliFrontend                           -  Starting Command Line Client (Version: 0.10.0, Rev:ab2cca4, Date:10.11.2015 @ 13:50:14 UTC)
+00:22:16,220 INFO  org.apache.flink.client.CliFrontend                           -  Current user: root
+00:22:16,220 INFO  org.apache.flink.client.CliFrontend                           -  JVM: OpenJDK 64-Bit Server VM - Oracle Corporation - 1.8/25.171-b11
+00:22:16,221 INFO  org.apache.flink.client.CliFrontend                           -  Maximum heap size: 3548 MiBytes
+00:22:16,221 INFO  org.apache.flink.client.CliFrontend                           -  JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -  Hadoop version: 2.7.0
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -  JVM Options:
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     -Dlog.file=/home/hosein/Flink/flink-0.10.0/log/flink-root-client-hosein-New-Server.log
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     -Dlog4j.configuration=file:/home/hosein/Flink/flink-0.10.0/conf/log4j-cli.properties
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     -Dlogback.configurationFile=file:/home/hosein/Flink/flink-0.10.0/conf/logback.xml
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -  Program Arguments:
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     run
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     --class
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     cn.ac.ict.bigdatabench.Classifier
+00:22:16,223 INFO  org.apache.flink.client.CliFrontend                           -     /home/hosein/Flink/BigDataBench_V3.2_Flink/JAR_FILE/bigdatabench-flink-0.10.0.jar
+00:22:16,224 INFO  org.apache.flink.client.CliFrontend                           -     hdfs://localhost:9000/Bayesclassifier/testdata
+00:22:16,224 INFO  org.apache.flink.client.CliFrontend                           -     hdfs://localhost:9000/flink-Bayes-result
+00:22:16,224 INFO  org.apache.flink.client.CliFrontend                           - --------------------------------------------------------------------------------
+00:22:16,224 INFO  org.apache.flink.client.CliFrontend                           - Using configuration directory /home/hosein/Flink/flink-0.10.0/conf
+00:22:16,225 INFO  org.apache.flink.client.CliFrontend                           - Trying to load configuration file
+00:22:16,398 INFO  org.apache.flink.client.CliFrontend                           - Running 'run' command.
+00:22:16,405 INFO  org.apache.flink.client.CliFrontend                           - Building program from JAR file
+00:22:16,511 INFO  org.apache.flink.client.program.Client                        - Starting client actor system
+00:22:16,512 INFO  org.apache.flink.runtime.client.JobClient                     - Starting JobClient actor system
+00:22:16,760 INFO  akka.event.slf4j.Slf4jLogger                                  - Slf4jLogger started
+00:22:16,792 INFO  Remoting                                                      - Starting remoting
+00:22:16,896 INFO  Remoting                                                      - Remoting started; listening on addresses :[akka.tcp://flink@127.0.0.1:43509]
+00:22:16,900 INFO  org.apache.flink.runtime.client.JobClient                     - Started JobClient actor system at 127.0.0.1:43509
+00:22:16,900 INFO  org.apache.flink.client.CliFrontend                           - Starting execution of program
+00:22:16,900 INFO  org.apache.flink.client.program.Client                        - Starting program in interactive mode
+00:22:17,070 INFO  org.apache.flink.api.java.ExecutionEnvironment                - The job has 0 registered types and 0 default Kryo serializers
+00:22:17,480 WARN  org.apache.flink.api.common.io.DelimitedInputFormat           - Could not determine statistics for file 'hdfs://localhost:9000/Bayesclassifier/testdata' due to an io error: File does not exist: hdfs://localhost:9000/Bayesclassifier/testdata
+00:22:17,591 INFO  org.apache.flink.runtime.client.JobClientActor                - Received job Flink Java Job at Wed May 30 00:22:17 EDT 2018 (5c9154c4cb104f7a1f17b1429c13a00f).
+00:22:17,591 INFO  org.apache.flink.runtime.client.JobClientActor                - Could not submit job Flink Java Job at Wed May 30 00:22:17 EDT 2018 (5c9154c4cb104f7a1f17b1429c13a00f), because there is no connection to a JobManager.
+00:22:17,636 WARN  Remoting                                                      - Tried to associate with unreachable remote address [akka.tcp://flink@127.0.0.1:6123]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: /127.0.0.1:6123

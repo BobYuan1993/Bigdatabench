@@ -1,0 +1,74 @@
+15:46:30,946 WARN  org.apache.hadoop.util.NativeCodeLoader                       - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15:46:30,998 INFO  org.apache.flink.runtime.jobmanager.JobManager                - --------------------------------------------------------------------------------
+15:46:30,999 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Starting JobManager (Version: 0.10.0, Rev:ab2cca4, Date:10.11.2015 @ 13:50:14 UTC)
+15:46:30,999 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Current user: root
+15:46:30,999 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JVM: OpenJDK 64-Bit Server VM - Oracle Corporation - 1.8/25.151-b12
+15:46:30,999 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Maximum heap size: 4907 MiBytes
+15:46:30,999 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Hadoop version: 2.7.0
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JVM Options:
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Xms5120m
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Xmx5120m
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlog.file=/home/hosein/Flink/flink-0.10.0/log/flink-root-jobmanager-1-hosein-New-Server.log
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlog4j.configuration=file:/home/hosein/Flink/flink-0.10.0/conf/log4j.properties
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlogback.configurationFile=file:/home/hosein/Flink/flink-0.10.0/conf/logback.xml
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Program Arguments:
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --configDir
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     /home/hosein/Flink/flink-0.10.0/conf
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --executionMode
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     local
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --streamingMode
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     batch
+15:46:31,001 INFO  org.apache.flink.runtime.jobmanager.JobManager                - --------------------------------------------------------------------------------
+15:46:31,096 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Loading configuration from /home/hosein/Flink/flink-0.10.0/conf
+15:46:31,106 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Staring JobManager without high-availability
+15:46:31,110 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager on 127.0.0.1:6123 with execution mode LOCAL and streaming mode BATCH_ONLY
+15:46:31,129 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Security is not enabled. Starting non-authenticated JobManager.
+15:46:31,129 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager
+15:46:31,130 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager actor system at 127.0.0.1:6123
+15:46:31,360 INFO  akka.event.slf4j.Slf4jLogger                                  - Slf4jLogger started
+15:46:31,387 INFO  Remoting                                                      - Starting remoting
+15:46:31,471 ERROR akka.remote.transport.netty.NettyTransport                    - failed to bind to /127.0.0.1:6123, shutting down Netty transport
+15:46:31,476 ERROR org.apache.flink.runtime.jobmanager.JobManager                - Failed to run JobManager.
+java.lang.Exception: Unable to create JobManager at address localhost:6123 - Address already in use
+	at org.apache.flink.runtime.jobmanager.JobManager$.startActorSystemAndJobManagerActors(JobManager.scala:1545)
+	at org.apache.flink.runtime.jobmanager.JobManager$.runJobManager(JobManager.scala:1486)
+	at org.apache.flink.runtime.jobmanager.JobManager$.main(JobManager.scala:1447)
+	at org.apache.flink.runtime.jobmanager.JobManager.main(JobManager.scala)
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:6123
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:393)
+	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:389)
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Success.map(Try.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67)
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82)
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59)
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:401)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:366)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:290)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+15:46:31,479 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator         - Shutting down remote daemon.

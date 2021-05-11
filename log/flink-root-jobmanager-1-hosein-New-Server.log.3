@@ -1,0 +1,73 @@
+14:21:16,747 WARN  org.apache.hadoop.util.NativeCodeLoader                       - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                - --------------------------------------------------------------------------------
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Starting JobManager (Version: 0.10.0, Rev:ab2cca4, Date:10.11.2015 @ 13:50:14 UTC)
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Current user: root
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JVM: OpenJDK 64-Bit Server VM - Oracle Corporation - 1.8/25.151-b12
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Maximum heap size: 736 MiBytes
+14:21:16,800 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Hadoop version: 2.7.0
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  JVM Options:
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Xms768m
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Xmx768m
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlog.file=/home/hosein/Flink/flink-0.10.0/log/flink-root-jobmanager-1-hosein-New-Server.log
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlog4j.configuration=file:/home/hosein/Flink/flink-0.10.0/conf/log4j.properties
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     -Dlogback.configurationFile=file:/home/hosein/Flink/flink-0.10.0/conf/logback.xml
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -  Program Arguments:
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --configDir
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     /home/hosein/Flink/flink-0.10.0/conf
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --executionMode
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     local
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     --streamingMode
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                -     batch
+14:21:16,802 INFO  org.apache.flink.runtime.jobmanager.JobManager                - --------------------------------------------------------------------------------
+14:21:16,892 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Loading configuration from /home/hosein/Flink/flink-0.10.0/conf
+14:21:16,902 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Staring JobManager without high-availability
+14:21:16,906 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager on 127.0.0.1:6123 with execution mode LOCAL and streaming mode BATCH_ONLY
+14:21:16,923 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Security is not enabled. Starting non-authenticated JobManager.
+14:21:16,924 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager
+14:21:16,924 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager actor system at 127.0.0.1:6123
+14:21:17,151 INFO  akka.event.slf4j.Slf4jLogger                                  - Slf4jLogger started
+14:21:17,179 INFO  Remoting                                                      - Starting remoting
+14:21:17,269 INFO  Remoting                                                      - Remoting started; listening on addresses :[akka.tcp://flink@127.0.0.1:6123]
+14:21:17,273 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManger web frontend
+14:21:17,286 INFO  org.apache.flink.runtime.webmonitor.WebRuntimeMonitor         - Using directory /tmp/flink-web-b598d076-78da-4097-a184-374dac2d6ddd for the web interface files
+14:21:17,287 INFO  org.apache.flink.runtime.webmonitor.WebRuntimeMonitor         - Serving job manager log from /home/hosein/Flink/flink-0.10.0/log/flink-root-jobmanager-1-hosein-New-Server.log
+14:21:17,287 INFO  org.apache.flink.runtime.webmonitor.WebRuntimeMonitor         - Serving job manager stdout from /home/hosein/Flink/flink-0.10.0/log/flink-root-jobmanager-1-hosein-New-Server.out
+14:21:17,461 INFO  org.apache.flink.runtime.webmonitor.WebRuntimeMonitor         - Web frontend listening at 0:0:0:0:0:0:0:0:8081
+14:21:17,462 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager actor
+14:21:17,465 INFO  org.apache.flink.runtime.blob.BlobServer                      - Created BLOB server storage directory /tmp/blobStore-5d7144c8-330e-4e6d-bbcc-a6dcef404d4b
+14:21:17,466 INFO  org.apache.flink.runtime.blob.BlobServer                      - Started BLOB server at 0.0.0.0:40017 - max concurrent requests: 50 - max backlog: 1000
+14:21:17,472 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting embedded TaskManager for JobManager's LOCAL execution mode
+14:21:17,473 INFO  org.apache.flink.runtime.jobmanager.JobManager                - Starting JobManager at akka.tcp://flink@127.0.0.1:6123/user/jobmanager.
+14:21:17,474 INFO  org.apache.flink.runtime.jobmanager.MemoryArchivist           - Started memory archivist akka://flink/user/archive
+14:21:17,476 INFO  org.apache.flink.runtime.jobmanager.JobManager                - JobManager akka.tcp://flink@127.0.0.1:6123/user/jobmanager was granted leadership with leader session ID None.
+14:21:17,478 INFO  org.apache.flink.runtime.taskmanager.TaskManager              - Messages between TaskManager and JobManager have a max timeout of 100000 milliseconds
+14:21:17,480 INFO  org.apache.flink.runtime.taskmanager.TaskManager              - Temporary file directory '/tmp': total 226 GB, usable 50 GB (22.12% usable)
+14:21:17,495 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool  - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+14:21:17,496 INFO  org.apache.flink.runtime.taskmanager.TaskManager              - Using 2048 MB for Flink managed memory.
+14:21:18,524 ERROR org.apache.flink.runtime.jobmanager.JobManager                - Error while starting up JobManager
+java.lang.Exception: OutOfMemory error (Java heap space) while allocating the TaskManager heap memory (2147483648 bytes).
+	at org.apache.flink.runtime.taskmanager.TaskManager$.startTaskManagerComponentsAndActor(TaskManager.scala:1634)
+	at org.apache.flink.runtime.jobmanager.JobManager$.startActorSystemAndJobManagerActors(JobManager.scala:1606)
+	at org.apache.flink.runtime.jobmanager.JobManager$.runJobManager(JobManager.scala:1486)
+	at org.apache.flink.runtime.jobmanager.JobManager$.main(JobManager.scala:1447)
+	at org.apache.flink.runtime.jobmanager.JobManager.main(JobManager.scala)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.flink.runtime.memory.MemoryManager$HeapMemoryPool.<init>(MemoryManager.java:611)
+	at org.apache.flink.runtime.memory.MemoryManager.<init>(MemoryManager.java:163)
+	at org.apache.flink.runtime.taskmanager.TaskManager$.startTaskManagerComponentsAndActor(TaskManager.scala:1623)
+	... 4 more
+14:21:18,527 ERROR org.apache.flink.runtime.jobmanager.JobManager                - Failed to run JobManager.
+java.lang.Exception: OutOfMemory error (Java heap space) while allocating the TaskManager heap memory (2147483648 bytes).
+	at org.apache.flink.runtime.taskmanager.TaskManager$.startTaskManagerComponentsAndActor(TaskManager.scala:1634)
+	at org.apache.flink.runtime.jobmanager.JobManager$.startActorSystemAndJobManagerActors(JobManager.scala:1606)
+	at org.apache.flink.runtime.jobmanager.JobManager$.runJobManager(JobManager.scala:1486)
+	at org.apache.flink.runtime.jobmanager.JobManager$.main(JobManager.scala:1447)
+	at org.apache.flink.runtime.jobmanager.JobManager.main(JobManager.scala)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.flink.runtime.memory.MemoryManager$HeapMemoryPool.<init>(MemoryManager.java:611)
+	at org.apache.flink.runtime.memory.MemoryManager.<init>(MemoryManager.java:163)
+	at org.apache.flink.runtime.taskmanager.TaskManager$.startTaskManagerComponentsAndActor(TaskManager.scala:1623)
+	... 4 more
+14:21:18,528 INFO  org.apache.flink.runtime.webmonitor.WebRuntimeMonitor         - Removing web root dir /tmp/flink-web-b598d076-78da-4097-a184-374dac2d6ddd
+14:21:18,532 INFO  org.apache.flink.runtime.blob.BlobServer                      - Stopped BLOB server at 0.0.0.0:40017
